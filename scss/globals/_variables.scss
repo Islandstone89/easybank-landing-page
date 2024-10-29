@@ -1,0 +1,79 @@
+
+/* CUSTOM PROPERTIES */
+
+:root {
+
+    /* Primitive properties */
+
+    --clr-green: hsl(136, 65%, 51%);
+    --clr-lime-green: hsl(158, 61%, 49%);
+    --clr-light-blue: hsl(192, 70%, 51%);
+    --clr-dark-blue: hsl(233, 26%, 24%);
+
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-very-light-grey: hsl(0, 0%, 98%);
+    --clr-light-grayish-blue: hsl(220, 16%, 96%);
+    --clr-grayish-blue: hsl(232, 8%, 61%);
+
+    --ff-sans-serif: 'Public Sans', sans-serif;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --fs-14px: .875rem;
+    --fs-16px: 1rem;
+    --fs-18px: 1.125rem;
+    --fs-20px: 1.25rem;
+    --fs-24px: 1.5rem;
+    --fs-32px: 2rem;
+    --fs-40px: 2.5rem;
+    --fs-56px: 3.5rem;
+
+    --space-8px: 8px;
+    --space-16px: 16px;
+    --space-20px: 20px;
+    --space-24px: 24px;
+    --space-32px: 32px;
+    --space-40px: 40px;
+    --space-56px: 56px;
+    --space-72px: 72px;
+    --space-88px: 88px;
+
+    /* Semantic properties */
+
+    --clr-primary-100: var(--clr-green);
+    --clr-primary-200: var(--clr-lime-green);
+    --clr-primary-300: var(--clr-light-blue);
+    --clr-primary-400: var(--clr-dark-blue);
+
+    --clr-neutral-100: var(--clr-white);
+    --clr-neutral-200: var(--clr-very-light-grey);
+    --clr-neutral-300: var(--clr-light-grayish-blue);
+    --clr-neutral-400: var(--clr-grayish-blue);
+
+    --ff-primary: var(--ff-sans-serif);
+
+    --fw-light: var(--fw-300);
+    --fw-regular: var(--fw-400);
+    --fw-bold: var(--fw-700);
+
+    --fs-75: var(--fs-14px);
+    --fs-100: var(--fs-16px);
+    --fs-125: var(--fs-18px);
+    --fs-150: var(--fs-20px);
+    --fs-200: var(--fs-24px);
+    --fs-300: var(--fs-32px);
+    --fs-400: var(--fs-40px);
+    --fs-600: var(--fs-56px);
+
+    --space-50: var(--space-8px);
+    --space-100: var(--space-16px);
+    --space-150: var(--space-20px);
+    --space-200: var(--space-24px);
+    --space-300: var(--space-32px);
+    --space-400: var(--space-40px);
+    --space-600: var(--space-56px);
+    --space-800: var(--space-72px);
+    --space-1000: var(--space-88px);
+}
