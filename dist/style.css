@@ -109,7 +109,7 @@ textarea:not([rows]) {
   --clr-green: hsl(136, 65%, 51%);
   --clr-lime-green: hsl(158, 61%, 49%);
   --clr-light-blue: hsl(192, 70%, 51%);
-  --clr-dark-blue: hsl(231, 26%, 24%);
+  --clr-dark-blue: hsl(231, 27%, 24%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-very-light-grey: hsl(0, 0%, 98%);
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
@@ -238,4 +238,22 @@ h2 {
 .footer {
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
+}
+
+.footer-logo path {
+  fill: var(--clr-neutral-100);
+}
+
+.social-media-icon {
+  cursor: pointer;
+}
+
+.social-media-icon path:is(:hover, :focus-visible) {
+  fill: var(--clr-primary-200);
+  transition: 250ms ease-in-out;
+}
+
+.footer__link:is(:hover, :focus-visible) {
+  color: var(--clr-primary-200);
+  transition: 250ms ease-in-out;
 }/*# sourceMappingURL=style.css.map */
