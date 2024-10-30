@@ -242,7 +242,36 @@ h2 {
   --gap: var(--space-200);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
+  grid-template-rows: auto auto auto auto;
   gap: var(--gap);
+}
+@media (width > 56.25rem) {
+  .articles {
+    --gap: var(--space-300);
+  }
+}
+
+.article {
+  grid-row: 1/5;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: var(--space-200);
+}
+
+.article__image-wrapper {
+  grid-row: 1/2;
+}
+
+.article__image {
+  height: 100%;
+}
+
+.article__text {
+  grid-row: 2/5;
+  display: grid;
+  grid-template-rows: subgrid;
+  gap: var(--space-50);
+  padding-inline: var(--space-200);
 }
 
 .article__author {
