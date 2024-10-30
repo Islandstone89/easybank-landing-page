@@ -1,1 +1,21 @@
 @use '../globals/utilities' as util;
+
+.articles {
+    --min-width: 250px;
+    --gap: var(--space-200);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
+    gap: var(--gap);
+}
+
+.article__author {
+    font-size: var(--fs-75);
+}
+
+.article__heading {
+    font-size: var(--fs-125);
+}
+
+.article__preview {
+    font-size: var(--fs-100);
+}

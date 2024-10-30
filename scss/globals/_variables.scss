@@ -40,6 +40,7 @@
     --space-56px: 56px;
     --space-72px: 72px;
     --space-88px: 88px;
+    --space-128px: 128px;
 
     /* Semantic properties */
 
@@ -78,4 +79,5 @@
     --space-600: var(--space-56px);
     --space-800: var(--space-72px);
     --space-1000: var(--space-88px);
+    --space-1500: var(--space-128px);
 }

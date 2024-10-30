@@ -136,6 +136,7 @@ textarea:not([rows]) {
   --space-56px: 56px;
   --space-72px: 72px;
   --space-88px: 88px;
+  --space-128px: 128px;
   /* Semantic properties */
   --clr-primary-100: var(--clr-green);
   --clr-primary-200: var(--clr-lime-green);
@@ -167,6 +168,7 @@ textarea:not([rows]) {
   --space-600: var(--space-56px);
   --space-800: var(--space-72px);
   --space-1000: var(--space-88px);
+  --space-1500: var(--space-128px);
 }
 
 /* UTILITIES */
@@ -233,6 +235,26 @@ h2 {
 
 .benefits {
   background-color: var(--clr-neutral-300);
+}
+
+.articles {
+  --min-width: 250px;
+  --gap: var(--space-200);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
+  gap: var(--gap);
+}
+
+.article__author {
+  font-size: var(--fs-75);
+}
+
+.article__heading {
+  font-size: var(--fs-125);
+}
+
+.article__preview {
+  font-size: var(--fs-100);
 }
 
 .footer {
