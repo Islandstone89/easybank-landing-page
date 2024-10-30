@@ -1,0 +1,5 @@
+@use '../globals/utilities' as util;
+
+.main-heading {
+    font-size: clamp(var(--fs-400), 2rem + 2.5vw, var(--fs-600));
+}

@@ -1,0 +1,35 @@
+
+@use '../globals/utilities' as util;
+
+/* BASE STYLES */
+
+body {
+    font-family: var(--ff-primary);
+    background-color: var(--clr-neutral-200);
+    color: var(--clr-neutral-400);
+}
+
+.btn {
+    text-transform: capitalize;
+    font-size: var(--fs-75);
+    font-weight: var(--fw-bold);
+    background-image: linear-gradient(45deg, var(--clr-primary-200), var(--clr-primary-300));
+    color: var(--clr-neutral-100);
+    padding-block: var(--space-50);
+    padding-inline: var(--space-300);
+    border-radius: 22px;
+    transition: opacity 250ms ease-in-out;
+
+    &:is(:hover, :focus-visible) {
+        opacity: .75;
+    }
+}
+
+:is(h1, h2, h3, h4) {
+    font-weight: var(--fw-light);
+    color: var(--clr-primary-400);
+}
+
+h2 {
+    font-size: clamp(var(--fs-300), 1.75rem + 1.25vw, var(--fs-400));
+}
