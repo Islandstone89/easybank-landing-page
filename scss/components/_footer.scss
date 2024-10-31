@@ -12,7 +12,7 @@
     
     @include util.breakpoint(large) {
         flex-direction: row;
-        gap: var(--space-300);
+        gap: var(--space-1500);
         padding-block: var(--space-500);
         padding-inline: var(--space-1500);
     }
@@ -32,6 +32,12 @@
 
 .footer-logo path {
     fill: var(--clr-neutral-100);
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: var(--space-100);
 }
 
 .social-media-icon {
@@ -55,7 +61,7 @@
 
     @include util.breakpoint(large) {
         flex-direction: row;
-        gap: var(--space-900);
+        gap: var(--space-1000);
         align-items: initial;
     }
 }
@@ -78,3 +84,15 @@
         transition: 250ms ease-in-out;
     }
 }
+
+.copyright-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-200);
+
+     @include util.breakpoint(large) {
+        margin-inline-start: auto;
+    }
+}
+
