@@ -19,6 +19,11 @@
     gap: var(--space-300);
 }
 
+.primary-nav__item {
+    border-bottom: 4px solid green;
+    padding-block-end: var(--space-250);
+}
+
 .primary-nav__link {
     &:is(:hover, :focus-visible) {
         color: var(--clr-primary-400);

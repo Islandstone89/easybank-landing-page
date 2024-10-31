@@ -131,6 +131,7 @@ textarea:not([rows]) {
   --space-16px: 16px;
   --space-20px: 20px;
   --space-24px: 24px;
+  --space-28px: 28px;
   --space-32px: 32px;
   --space-36px: 36px;
   --space-40px: 40px;
@@ -167,6 +168,7 @@ textarea:not([rows]) {
   --space-100: var(--space-16px);
   --space-150: var(--space-20px);
   --space-200: var(--space-24px);
+  --space-250: var(--space-28px);
   --space-300: var(--space-32px);
   --space-350: var(--space-36px);
   --space-400: var(--space-40px);
@@ -243,6 +245,11 @@ h2 {
   display: flex;
   align-items: center;
   gap: var(--space-300);
+}
+
+.primary-nav__item {
+  border-bottom: 4px solid green;
+  padding-block-end: var(--space-250);
 }
 
 .primary-nav__link:is(:hover, :focus-visible) {
