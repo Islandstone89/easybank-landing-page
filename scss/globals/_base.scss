@@ -9,7 +9,21 @@ body {
     color: var(--clr-neutral-400);
 }
 
+:is(.header, .main, .footer) {
+    max-width: 1600px;
+    margin-inline: auto;
+}
+
+section {
+    padding-inline: var(--space-200);
+
+    @include util.breakpoint(large) {
+        padding-inline: var(--space-1500);
+    }
+}
+
 .btn {
+    display: inline-block;
     text-transform: capitalize;
     font-size: var(--fs-75);
     font-weight: var(--fw-bold);

@@ -19,3 +19,11 @@
         color: var(--clr-primary-400);
     }
 }
+
+.header-btn {
+    display: none;
+
+    @include util.breakpoint(large) {
+        display: inline-block;
+    }
+}

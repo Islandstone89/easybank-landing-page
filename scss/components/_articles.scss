@@ -1,6 +1,16 @@
 @use '../globals/utilities' as util;
 
+.latest-articles {
+    padding-block: var(--space-1000);
+
+    @include util.breakpoint(large) {
+        padding-block: var(--space-900);
+    }
+}
+
 .articles {
+    --flow-space: var(--space-300);
+
     --min-width: 250px;
     --gap: var(--space-200);
     display: grid;
@@ -9,6 +19,7 @@
     gap: var(--gap);
 
     @include util.breakpoint(large) {
+        --flow-space: var(--space-400);
         --gap: var(--space-300);
     }
 }

@@ -1,4 +1,5 @@
 
+
 /* UTILITIES */
 
 $breakpoints: (
@@ -19,5 +20,5 @@ $breakpoints: (
 }
 
 .flow > * + * {
-    margin-bottom: var(--flow-space);
+    margin-block-start: var(--flow-space);
 }

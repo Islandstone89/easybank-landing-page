@@ -1,5 +1,38 @@
 @use '../globals/utilities' as util;
 
 .benefits {
+    --flow-space: var(--space-600);
     background-color: var(--clr-neutral-300);
+    text-align: center;
+    padding-block: var(--space-700);
+
+    @include util.breakpoint(large) {
+        --flow-space: var(--space-800);
+        text-align: initial;
+        padding-block: initial;
+    }
+}
+
+.benefits__tagline {
+    --flow-space: var(--space-100);
+    font-size: clamp(var(--fs-100), 0.93rem + 0.31vw, var(--fs-125));
+}
+
+.benefit__heading {
+    font-size: clamp(var(--fs-150), 1.125rem + 0.625vw, var(--fs-200));
+}
+
+.benefits__list {
+    --min-width: 250px;
+    --gap: var(--space-300);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%, var(--min-width)), 1fr));
+    gap: var(--gap);
+    grid-template-rows: auto auto auto;
+}
+
+.benefit {
+    grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: subgrid;
 }

@@ -3,3 +3,20 @@
 .main-heading {
     font-size: clamp(var(--fs-400), 2rem + 2.5vw, var(--fs-600));
 }
+
+.hero-btn {
+    --flow-space: var(--space-300);
+
+    @include util.breakpoint(large) {
+        --flow-space: var(--space-350);
+    }
+}
+
+.hero__tagline {
+    --flow-space: var(--space-100);
+    font-size: clamp(var(--fs-100), 0.93rem + 0.31vw, var(--fs-125));
+
+    @include util.breakpoint(large) {
+        --flow-space: var(--space-200);
+    }
+}
