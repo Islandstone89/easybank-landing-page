@@ -14,14 +14,6 @@ body {
     margin-inline: auto;
 }
 
-section {
-    padding-inline: var(--space-200);
-
-    @include util.breakpoint(large) {
-        padding-inline: var(--space-1500);
-    }
-}
-
 .btn {
     display: inline-block;
     text-transform: capitalize;

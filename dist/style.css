@@ -198,15 +198,6 @@ body {
   margin-inline: auto;
 }
 
-section {
-  padding-inline: var(--space-200);
-}
-@media (width > 56.25rem) {
-  section {
-    padding-inline: var(--space-1500);
-  }
-}
-
 .btn {
   display: inline-block;
   text-transform: capitalize;
@@ -238,6 +229,12 @@ h2 {
   justify-content: space-between;
   gap: var(--space-100);
   background-color: var(--clr-neutral-100);
+  padding-inline: var(--space-200);
+}
+@media (width > 56.25rem) {
+  .header {
+    padding-inline: var(--space-1500);
+  }
 }
 
 .primary-nav__list {
@@ -287,10 +284,12 @@ h2 {
   background-color: var(--clr-neutral-300);
   text-align: center;
   padding-block: var(--space-700);
+  padding-inline: var(--space-200);
 }
 @media (width > 56.25rem) {
   .benefits {
     --flow-space: var(--space-800);
+    padding-inline: var(--space-1500);
     text-align: initial;
     padding-block: initial;
   }
@@ -322,10 +321,12 @@ h2 {
 
 .latest-articles {
   padding-block: var(--space-1000);
+  padding-inline: var(--space-200);
 }
 @media (width > 56.25rem) {
   .latest-articles {
     padding-block: var(--space-900);
+    padding-inline: var(--space-1500);
   }
 }
 
@@ -388,12 +389,14 @@ h2 {
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   padding-block: var(--space-400);
+  padding-inline: var(--space-200);
 }
 @media (width > 56.25rem) {
   .footer {
     flex-direction: row;
     gap: var(--space-300);
     padding-block: var(--space-500);
+    padding-inline: var(--space-1500);
   }
 }
 

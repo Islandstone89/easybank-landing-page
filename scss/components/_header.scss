@@ -6,6 +6,11 @@
     justify-content: space-between;
     gap: var(--space-100);
     background-color: var(--clr-neutral-100);
+    padding-inline: var(--space-200);
+
+    @include util.breakpoint(large) {
+        padding-inline: var(--space-1500);
+    }
 }
 
 .primary-nav__list {

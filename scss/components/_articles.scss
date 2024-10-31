@@ -2,10 +2,14 @@
 
 .latest-articles {
     padding-block: var(--space-1000);
+    padding-inline: var(--space-200);
 
     @include util.breakpoint(large) {
         padding-block: var(--space-900);
-    }
+        padding-inline: var(--space-1500);
+}
+
+  
 }
 
 .articles {

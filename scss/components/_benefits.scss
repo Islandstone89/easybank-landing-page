@@ -5,9 +5,11 @@
     background-color: var(--clr-neutral-300);
     text-align: center;
     padding-block: var(--space-700);
-
+    padding-inline: var(--space-200);
+    
     @include util.breakpoint(large) {
         --flow-space: var(--space-800);
+        padding-inline: var(--space-1500);
         text-align: initial;
         padding-block: initial;
     }
