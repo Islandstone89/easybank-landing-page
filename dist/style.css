@@ -114,6 +114,7 @@ textarea:not([rows]) {
   --clr-very-light-grey: hsl(0, 0%, 98%);
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
   --clr-grayish-blue: hsl(232, 8%, 41%); /* Decreased lightness from 61% to 41% for better readibility */
+  --clr-light-grey: hsl(229, 9%, 82%); /* Copyright text, white with 50% opacity - increased lightness for better  contrast  */
   --ff-sans-serif: "Public Sans", sans-serif;
   --fw-300: 300;
   --fw-400: 400;
@@ -149,6 +150,7 @@ textarea:not([rows]) {
   --clr-neutral-200: var(--clr-very-light-grey);
   --clr-neutral-300: var(--clr-light-grayish-blue);
   --clr-neutral-400: var(--clr-grayish-blue);
+  --clr-neutral-500: var(--clr-light-grey);
   --ff-primary: var(--ff-sans-serif);
   --fw-light: var(--fw-300);
   --fw-regular: var(--fw-400);
@@ -305,7 +307,7 @@ h2 {
 }
 
 .benefits__list {
-  --min-width: 250px;
+  --min-width: 200px;
   --gap: var(--space-300);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
@@ -332,45 +334,48 @@ h2 {
 
 .articles {
   --flow-space: var(--space-300);
-  --min-width: 250px;
+  --columns: 1;
   --gap: var(--space-200);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
-  grid-template-rows: auto auto auto auto;
+  grid-template-columns: repeat(var(--columns), 1fr);
   gap: var(--gap);
 }
 @media (width > 56.25rem) {
   .articles {
     --flow-space: var(--space-400);
     --gap: var(--space-300);
+    --columns: 4;
   }
 }
 
-.article {
-  grid-row: 1/5;
-  display: grid;
-  grid-template-rows: subgrid;
-  gap: var(--space-200);
-}
-
+/* .article {
+    grid-row: 1 / 5;
+    display: grid;
+    grid-template-rows: subgrid;
+    gap: var(--space-200);
+} */
 .article__image-wrapper {
-  grid-row: 1/2;
+  /* grid-row: 1 / 2; */
 }
 
 .article__image {
   height: 100%;
+  aspect-ratio: 5.1/4;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article__text {
-  grid-row: 2/5;
+  /* grid-row: 2 / 5;
   display: grid;
   grid-template-rows: subgrid;
-  gap: var(--space-50);
+  gap: var(--space-50); */
   padding-inline: var(--space-200);
 }
 
 .article__author {
   font-size: var(--fs-75);
+  padding-block-start: 16px;
 }
 
 .article__heading {
@@ -379,6 +384,12 @@ h2 {
 
 .article__preview {
   font-size: var(--fs-100);
+}
+
+.article {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 8px;
 }
 
 .footer {
@@ -473,4 +484,8 @@ h2 {
   .copyright-wrapper {
     margin-inline-start: auto;
   }
+}
+
+.copyright {
+  color: var(--clr-neutral-500);
 }/*# sourceMappingURL=style.css.map */
