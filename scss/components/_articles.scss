@@ -12,42 +12,26 @@
 
 .articles {
     --flow-space: var(--space-300);
-    --columns: 1;
+    --min-width: 200px;
     --gap: var(--space-200);
 
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(min(100%, var(--min-width)), 1fr));
     gap: var(--gap);
 
     @include util.breakpoint(large) {
         --flow-space: var(--space-400);
         --gap: var(--space-300);
-        --columns: 4;
     }
 }
 
-/* .article {
-    grid-row: 1 / 5;
-    display: grid;
-    grid-template-rows: subgrid;
-    gap: var(--space-200);
-} */
-
-.article__image-wrapper {
-    /* grid-row: 1 / 2; */
-}
-
 .article__image {
-    height: 100%;
     aspect-ratio: 5.1 / 4;
     object-fit: cover;
 }
 
 .article__text {
-    /* grid-row: 2 / 5;
-    display: grid;
-    grid-template-rows: subgrid;
-    gap: var(--space-50); */
     padding-inline: var(--space-200);
 }
 
@@ -68,4 +52,14 @@
     display: grid;
     grid-template-rows: auto auto auto auto;
     gap: 8px;
+}
+
+.article__image-wrapper {
+    grid-row: 1 / 2;
+}
+
+.article__text {
+    grid-row: 2 / 5;
+    display: grid;
+    grid-template-rows: subgrid;
 }

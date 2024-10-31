@@ -1,5 +1,21 @@
 @use '../globals/utilities' as util;
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__image {
+    background-image: url('/images/bg-intro-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include util.breakpoint(large) {
+        background-image: url('/images/bg-intro-desktop.svg');
+    }
+}
+
 .main-heading {
     font-size: clamp(var(--fs-400), 2rem + 2.5vw, var(--fs-600));
 }
