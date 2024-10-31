@@ -235,9 +235,12 @@ h2 {
   background-color: var(--clr-neutral-100);
   padding-inline: var(--space-200);
 }
+.header > * {
+  padding-block: var(--space-200);
+}
 @media (width > 56.25rem) {
-  .header {
-    padding-inline: var(--space-1500);
+  .header > * {
+    padding-block: var(--space-300);
   }
 }
 
@@ -248,8 +251,16 @@ h2 {
 }
 
 .primary-nav__item {
-  border-bottom: 4px solid green;
-  padding-block-end: var(--space-250);
+  position: relative;
+}
+.primary-nav__item:is(:hover)::after {
+  content: "";
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-image: linear-gradient(45deg, var(--clr-primary-200), var(--clr-primary-300));
 }
 
 .primary-nav__link:is(:hover, :focus-visible) {
