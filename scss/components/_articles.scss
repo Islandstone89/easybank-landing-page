@@ -29,7 +29,7 @@
 .article {
     display: grid;
     grid-template-rows: auto auto auto auto;
-    gap: 8px;
+    gap: var(--space-50);
 }
 
 .article__image-wrapper {
@@ -52,7 +52,7 @@
 
 .article__author {
     font-size: var(--fs-75);
-    padding-block-start: 16px;
+    padding-block-start: var(--space-100);
 }
 
 .article__heading {
