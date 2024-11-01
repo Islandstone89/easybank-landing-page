@@ -15,6 +15,7 @@
     --clr-light-grayish-blue: hsl(220, 16%, 96%);
     --clr-grayish-blue: hsl(232, 8%, 41%); /* Decreased lightness from 61% to 41% for better readibility */
     --clr-light-grey: hsl(229, 9%, 82%); /* Copyright text, white with 50% opacity - increased lightness for better  contrast  */
+    --clr-dark-green: hsl(136, 99%, 25%);
 
     --ff-sans-serif: 'Public Sans', sans-serif;
 
@@ -59,6 +60,7 @@
     --clr-neutral-300: var(--clr-light-grayish-blue);
     --clr-neutral-400: var(--clr-grayish-blue);
     --clr-neutral-500: var(--clr-light-grey);
+    --clr-neutral-600: var(--clr-dark-green);
 
     --ff-primary: var(--ff-sans-serif);
 

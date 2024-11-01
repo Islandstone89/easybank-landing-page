@@ -115,6 +115,7 @@ textarea:not([rows]) {
   --clr-light-grayish-blue: hsl(220, 16%, 96%);
   --clr-grayish-blue: hsl(232, 8%, 41%); /* Decreased lightness from 61% to 41% for better readibility */
   --clr-light-grey: hsl(229, 9%, 82%); /* Copyright text, white with 50% opacity - increased lightness for better  contrast  */
+  --clr-dark-green: hsl(136, 99%, 25%);
   --ff-sans-serif: "Public Sans", sans-serif;
   --fw-300: 300;
   --fw-400: 400;
@@ -152,6 +153,7 @@ textarea:not([rows]) {
   --clr-neutral-300: var(--clr-light-grayish-blue);
   --clr-neutral-400: var(--clr-grayish-blue);
   --clr-neutral-500: var(--clr-light-grey);
+  --clr-neutral-600: var(--clr-dark-green);
   --ff-primary: var(--ff-sans-serif);
   --fw-light: var(--fw-300);
   --fw-regular: var(--fw-400);
@@ -453,6 +455,7 @@ h2 {
 }
 
 .article {
+  position: relative;
   display: grid;
   grid-template-rows: auto auto auto auto;
   gap: var(--space-50);
@@ -466,6 +469,7 @@ h2 {
   aspect-ratio: 5.1/4;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
 }
 
 .article__text {
@@ -482,6 +486,15 @@ h2 {
 
 .article__heading {
   font-size: var(--fs-125);
+}
+.article__heading:is(:hover, :focus-visible) {
+  color: var(--clr-neutral-600);
+}
+
+.article__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 .article__preview {

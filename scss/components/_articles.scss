@@ -27,6 +27,7 @@
 }
 
 .article {
+    position: relative;
     display: grid;
     grid-template-rows: auto auto auto auto;
     gap: var(--space-50);
@@ -40,6 +41,7 @@
 .article__image {
     aspect-ratio: 5.1 / 4;
     object-fit: cover;
+    height: 100%;
 }
 
 .article__text {
@@ -57,6 +59,16 @@
 
 .article__heading {
     font-size: var(--fs-125);
+
+    &:is(:hover, :focus-visible) {
+        color: var(--clr-neutral-600);
+    }
+}
+
+.article__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
 }
 
 .article__preview {
