@@ -17,10 +17,24 @@
     }
 }
 
+.primary-nav {
+    display: none;
+
+    @include util.breakpoint(large) {
+        display: block;
+    }
+}
+
 .primary-nav__list {
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
-    gap: var(--space-300);
+    gap: var(--space-200);
+
+    @include util.breakpoint(large) {
+        flex-direction: row;
+        gap: var(--space-300);
+    }
 }
 
 .primary-nav__item {
@@ -38,8 +52,14 @@
 }
 
 .primary-nav__link {
+    font-size: var(--fs-125);
+
     &:is(:hover, :focus-visible) {
         color: var(--clr-primary-400);
+    }
+
+    @include util.breakpoint(large) {
+        font-size: var(--fs-100);
     }
 }
 
@@ -49,4 +69,20 @@
     @include util.breakpoint(large) {
         display: inline-block;
     }
+}
+
+.menu-btn {
+    border: transparent;
+    background-color: transparent;
+}
+
+.open-btn {
+    
+    @include util.breakpoint(large) {
+        display: none;
+    }
+}
+
+.close-btn {
+   display: none;
 }

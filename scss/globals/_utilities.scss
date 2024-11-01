@@ -22,3 +22,12 @@ $breakpoints: (
 .flow > * + * {
     margin-block-start: var(--flow-space);
 }
+
+.visually-hidden {
+    clip-path: inset(50%);
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    white-space: nowrap;
+}

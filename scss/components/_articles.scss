@@ -6,13 +6,13 @@
 
     @include util.breakpoint(large) {
         padding-block: var(--space-900);
-        padding-inline: var(--space-1500);
+        padding-inline: var(--space-1000);
     }
 }
 
 .articles {
     --flow-space: var(--space-300);
-    --min-width: 200px;
+    --min-width: 225px;
     --gap: var(--space-200);
 
     display: grid;
@@ -26,14 +26,29 @@
     }
 }
 
+.article {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 8px;
+}
+
+.article__image-wrapper {
+    grid-row: 1 / 2;
+}
+
+
 .article__image {
     aspect-ratio: 5.1 / 4;
     object-fit: cover;
 }
 
 .article__text {
+    grid-row: 2 / 5;
+    display: grid;
+    grid-template-rows: subgrid;
     padding-inline: var(--space-200);
 }
+
 
 .article__author {
     font-size: var(--fs-75);
@@ -46,20 +61,4 @@
 
 .article__preview {
     font-size: var(--fs-100);
-}
-
-.article {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    gap: 8px;
-}
-
-.article__image-wrapper {
-    grid-row: 1 / 2;
-}
-
-.article__text {
-    grid-row: 2 / 5;
-    display: grid;
-    grid-template-rows: subgrid;
 }

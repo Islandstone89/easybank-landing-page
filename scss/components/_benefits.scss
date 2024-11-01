@@ -9,9 +9,9 @@
     
     @include util.breakpoint(large) {
         --flow-space: var(--space-800);
-        padding-inline: var(--space-1500);
         text-align: initial;
-        padding-block: initial;
+        padding-block: var(--space-1000);
+        padding-inline: var(--space-1000);
     }
 }
 
@@ -25,16 +25,33 @@
 }
 
 .benefits__list {
-    --min-width: 200px;
+    --min-width: 225px;
     --gap: var(--space-300);
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(min(100%, var(--min-width)), 1fr));
     gap: var(--gap);
-    grid-template-rows: auto auto auto;
 }
 
-.benefit {
-    grid-row: 1 / 4;
-    display: grid;
-    grid-template-rows: subgrid;
+.benefit-icon {
+    margin-inline: auto;
+
+    @include util.breakpoint(large) {
+        margin-inline: initial;
+    }
+}
+
+.benefit__heading {
+    --flow-space: var(--space-200);
+
+    @include util.breakpoint(large) {
+        --flow-space: var(--space-400);
+    }
+}
+
+.benefit__text {
+    --flow-space: var(--space-100);
+
+    @include util.breakpoint(large) {
+        --flow-space: var(--space-200);
+    }
 }
