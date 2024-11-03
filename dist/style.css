@@ -267,7 +267,7 @@ h2 {
 
 .primary-nav__list {
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
   gap: var(--space-200);
 }
@@ -327,10 +327,25 @@ h2 {
   display: none;
 }
 
+body:has(.open-btn[aria-expanded=true]) .open-btn {
+  display: none;
+}
+body:has(.open-btn[aria-expanded=true]) .close-btn {
+  display: block;
+}
+
 .hero {
+  --gap: var(--space-400);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--gap);
+}
+@media (width > 56.25rem) {
+  .hero {
+    flex-direction: row-reverse;
+    --gap: var(--space-250);
+  }
 }
 
 .hero__image {
@@ -341,6 +356,19 @@ h2 {
 @media (width > 56.25rem) {
   .hero__image {
     background-image: url("/images/bg-intro-desktop.svg");
+  }
+}
+
+.hero__text {
+  padding-inline-start: var(--space-200);
+  padding-inline-end: var(--space-200);
+  text-align: center;
+}
+@media (width > 56.25rem) {
+  .hero__text {
+    padding-inline-start: var(--space-1500);
+    padding-inline-end: initial;
+    text-align: initial;
   }
 }
 

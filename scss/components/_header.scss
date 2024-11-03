@@ -27,7 +27,7 @@
 
 .primary-nav__list {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
     gap: var(--space-200);
 
@@ -85,4 +85,16 @@
 
 .close-btn {
    display: none;
+}
+
+
+body:has(.open-btn[aria-expanded="true"]) {
+    
+    .open-btn {
+            display: none;
+    }
+
+    .close-btn {
+        display: block;
+     }
 }

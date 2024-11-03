@@ -1,12 +1,11 @@
 
 let openMenuBtn = document.querySelector(".open-btn");
+let closeMenuBtn = document.querySelector(".close-btn");
 
 openMenuBtn.addEventListener("click", () => {
-    if (openMenuBtn.getAttribute("aria-expanded", "false")) {
-        openMenuBtn.setAttribute("aria-expanded", "true")
-    }
+    openMenuBtn.setAttribute("aria-expanded", "true");
+})
 
-    else {
-        openMenuBtn.setAttribute("aria-expanded", "false")
-    }
+closeMenuBtn.addEventListener("click", () => {
+    openMenuBtn.setAttribute("aria-expanded", "false");
 })

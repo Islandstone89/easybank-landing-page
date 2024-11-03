@@ -1,9 +1,16 @@
 @use '../globals/utilities' as util;
 
 .hero {
+    --gap: var(--space-400);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--gap);
+
+    @include util.breakpoint(large) {
+     flex-direction: row-reverse;
+     --gap: var(--space-250);
+    }
 }
 
 .hero__image {
@@ -13,6 +20,18 @@
 
     @include util.breakpoint(large) {
         background-image: url('/images/bg-intro-desktop.svg');
+    }
+}
+
+.hero__text {
+    padding-inline-start: var(--space-200);
+    padding-inline-end: var(--space-200);
+    text-align: center;
+
+    @include util.breakpoint(large) {
+        padding-inline-start: var(--space-1500);
+        padding-inline-end: initial;
+        text-align: initial;
     }
 }
 
