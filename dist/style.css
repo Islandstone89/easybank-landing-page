@@ -360,6 +360,7 @@ body:has(.open-btn[aria-expanded=true]) .close-btn {
 }
 
 .hero__text {
+  padding-block-end: var(--space-1000);
   padding-inline-start: var(--space-200);
   padding-inline-end: var(--space-200);
   text-align: center;
@@ -471,7 +472,6 @@ body:has(.open-btn[aria-expanded=true]) .close-btn {
   --min-width: 225px;
   --gap: var(--space-200);
   display: grid;
-  grid-template-columns: repeat(var(--columns), 1fr);
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min-width)), 1fr));
   gap: var(--gap);
 }
