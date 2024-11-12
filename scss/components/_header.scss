@@ -78,7 +78,7 @@
 
 .open-btn {
     
-    @include util.breakpoint(large) {
+    @include util.breakpoint(medium) {
         display: none;
     }
 }
@@ -97,4 +97,23 @@ body:has(.open-btn[aria-expanded="true"]) {
     .close-btn {
         display: block;
      }
+
+     .primary-nav {
+        position: absolute;
+        top: 20%;
+        left: var(--space-100);
+        right: var(--space-100);
+        display: block;
+        border-radius: 4px;
+        padding-block: var(--space-100);
+        padding-inline: var(--space-1500);
+        z-index: 99;
+        background-color: var(--clr-neutral-100);
+     }
+
+     .hero {
+        position: relative;
+     }
+
+     
 }
