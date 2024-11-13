@@ -359,7 +359,7 @@ body:has(.open-btn[aria-expanded=true]) .hero {
 @media (width > 56.25rem) {
   .hero {
     flex-direction: row-reverse;
-    --gap: var(--space-250);
+    --gap: var(--space-800);
   }
 }
 

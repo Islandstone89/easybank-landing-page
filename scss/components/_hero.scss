@@ -9,7 +9,7 @@
 
     @include util.breakpoint(large) {
      flex-direction: row-reverse;
-     --gap: var(--space-250);
+     --gap: var(--space-800);
     }
 }
 
