@@ -6,14 +6,16 @@
     justify-content: space-between;
     gap: var(--space-100);
     background-color: var(--clr-neutral-100);
-    padding-inline: var(--space-200);
+    padding-inline-start: var(--space-200);
+    padding-inline-end: var(--space-200);
+
+    @include util.breakpoint(large) {
+        padding-inline-start: var(--space-1000);
+        padding-inline-end: var(--space-200);
+    }
     
     & > * {
         padding-block: var(--space-200);
-
-        @include util.breakpoint(large) {
-            padding-block: var(--space-300);
-        }
     }
 }
 
